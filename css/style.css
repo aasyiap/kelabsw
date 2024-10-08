@@ -174,37 +174,6 @@ strong {
 /*---------------------------------------
   SECTION               
 -----------------------------------------*/
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logo-games {
-  overflow: hidden;
-  padding: 20px 0;
-  background-color: black;
-  display: flex;
-  position: relative;
-}
-
-.logo-games:hover .banner-wrapper {
-  animation-play-state: paused;
-}
-
-.banner-wrapper {
-  display: flex;
-  animation: slide 20s infinite linear;
-}
-
-.banner-wrapper img {
-  height: 80px;
-  margin: 0 40px;
-}
-
 .contact-lists {
   display: grid;
   grid-template-columns: repeat(2, minmax(8rem, 1fr));
@@ -358,7 +327,7 @@ a {
 #header .logo {
   margin-left: auto;
   margin-right: auto;
-  height: 76px;
+  height: 64px;
 }
 
 img, iframe {
@@ -402,7 +371,7 @@ img, iframe {
   background-image: url();
   overflow: hidden;
   position: absolute;
-  top: 1px;
+  top: -9px;
   right: calc(0px - 50px);
   margin: 15px 0 0 0;
   border-radius: 0;
@@ -682,22 +651,32 @@ overflow: auto;
   height: 80px;
 }
 
+.listgame-cotainer {
+  overflow: hidden;
+  background-color: transparent;
+  display: flex;
+  position: relative;
+}
+
+.listgame-cotainer:hover .listgame-marquee {
+  animation-play-state: paused;
+}
+
+.listgame-marquee {
+  display: flex;
+  animation: slide 10s infinite linear;
+}
+
+.listgame-marquee img {
+  max-height: 100px;
+  margin: 0 15px;
+}
+
 .gateway-carousel {
   width: calc(100% - 20px);
   padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   overflow: hidden;
   position: relative;
-}
-
-
-.gateway-carousel p {
-  width: 100%;
-  height: 25px;
-  color: #fff;
-  background-color: transparent;
-  text-align: left;
-  font-size: 15px;
-  line-height: 35px;
 }
 
 .logo-carousel {
@@ -711,7 +690,7 @@ overflow: auto;
 }
 
 .gateway-logo {
-  animation: carousel 15s linear infinite;
+  animation: carousel 10s linear infinite;
   animation-play-state: running;
   position: absolute;
   inset: 0;
@@ -721,7 +700,7 @@ overflow: auto;
 
 .social-media{
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 30px;
   display: flex;
 }
 .social-media a img{
