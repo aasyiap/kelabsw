@@ -652,10 +652,10 @@ overflow: auto;
 }
 
 .listgame-cotainer {
-  overflow: hidden;
+  margin: 0 auto;
   background-color: transparent;
-  display: flex;
-  position: relative;
+  display: inline-block;
+  padding: 5px 0;
 }
 
 .listgame-cotainer:hover .listgame-marquee {
@@ -663,13 +663,17 @@ overflow: auto;
 }
 
 .listgame-marquee {
-  display: flex;
-  animation: slide 10s infinite linear;
+  width: auto;
+  display: inline-block;
+  padding-left: 0;
+  list-style: none;
+  margin-bottom: 0;
 }
 
 .listgame-marquee img {
-  max-height: 100px;
-  margin: 0 15px;
+  width: 95px; 
+  margin: 5px 10px 15px;
+  display: inline-block; 
 }
 
 .gateway-carousel {
@@ -792,6 +796,10 @@ overflow: auto;
   animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 #loading .btn {
