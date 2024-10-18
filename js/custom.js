@@ -86,7 +86,23 @@
       });
   });
   
-  
+  function showLoading() {
+    document.getElementById("loading").style.display = "block";
+    document.body.classList.add("no-scroll"); // Menambah kelas
+    }
+
+    function hideLoading() {
+    document.getElementById("loading").style.display = "none";
+    document.body.classList.remove("no-scroll"); // Menghapus kelas
+    }
+
+// Contoh pemanggilan
+    document.addEventListener("DOMContentLoaded", function() {
+    // Simulasi memuat data
+    showLoading(); // Tampilkan loading
+    setTimeout(hideLoading, 800); // Sembunyikan loading setelah 3 detik
+    });
+
           
   
   
